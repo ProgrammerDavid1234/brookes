@@ -1,0 +1,141 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.imgSpace {
+  width: 30%;
+  background-color: #f1f1f1;
+  padding-top: 50px;
+  padding-left: 50px;
+  display: flex;
+}
+
+.reg {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.89px;
+}
+
+.contentSpace {
+  width: 75%; 
+  padding: 20px;
+  text-align: center;
+}
+
+.skip {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.skip a {
+  color: black;
+  text-decoration: none;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.57px;
+}
+
+.heading p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+}
+
+.formContainer {
+  margin-top: 20px;
+  width: 100%; 
+  padding: 20px; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center; 
+}
+
+.form {
+  width: 60%; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.inputs {
+  padding: 8px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.submitButton {
+  grid-column: span 2;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.new a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  display: block;
+  width: 30%;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+.personal1 {
+  display: flex;
+  align-items: center;
+}
+.delete a{
+  text-decoration: none;
+  color: black;
+}
+
+.inputs {
+  padding: 12px; /* Increase padding for larger input fields */
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 100%; /* Ensures the input field takes up full width */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
