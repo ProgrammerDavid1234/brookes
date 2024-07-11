@@ -24,7 +24,7 @@ body {
 }
 
 .contentSpace {
-  width: 75%; 
+  flex-grow: 1;
   padding: 20px;
   text-align: center;
 }
@@ -41,6 +41,7 @@ body {
 
 .heading {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .heading h3 {
@@ -57,6 +58,7 @@ body {
 
 .formContainer {
   margin-top: 20px;
+  margin-bottom: 20px;
   width: 100%; 
   padding: 20px; 
   border: 1px solid #ccc;
@@ -76,6 +78,7 @@ body {
 .formGroup {
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .formGroup label {
@@ -84,10 +87,13 @@ body {
 }
 
 .inputs {
-  padding: 8px;
+  padding: 12px; /* Increase padding for larger input fields */
   border: 1px solid gray;
   border-radius: 4px;
   background-color: #fff;
+  width: 100%; /* Ensures the input field takes up full width */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+  font-size: 16px; /* Optional: Adjust font size */
 }
 
 .submitButton {
@@ -104,7 +110,12 @@ body {
   background-color: #0056b3;
 }
 
-.new a {
+.new, .delete {
+  cursor: pointer;
+  color: blue;
+}
+
+.new a, .delete a {
   text-decoration: none;
   color: black;
 }
@@ -125,17 +136,4 @@ body {
 .personal1 {
   display: flex;
   align-items: center;
-}
-.delete a{
-  text-decoration: none;
-  color: black;
-}
-
-.inputs {
-  padding: 12px; /* Increase padding for larger input fields */
-  border: 1px solid gray;
-  border-radius: 4px;
-  background-color: #fff;
-  width: 100%; /* Ensures the input field takes up full width */
-  box-sizing: border-box; /* Ensures padding and border are included in the width */
 }

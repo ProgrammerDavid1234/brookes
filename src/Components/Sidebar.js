@@ -69,6 +69,7 @@ const Sidebar = () => {
           </div>
         </div>
       </p>
+      <br />
       <div className={classes.signIn}>
         <BiLeftArrowAlt className={classes.arrowIcon} />
         <span><a href='#'>Sign In</a></span>

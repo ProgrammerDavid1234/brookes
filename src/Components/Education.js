@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classes from './Education.module.css';
 import Sidebar from './Sidebar.js';
+import { BiRightArrowAlt } from "react-icons/bi";
 
 const Education = () => {
   const [formData, setFormData] = useState([
@@ -56,7 +57,7 @@ const Education = () => {
 
       <div className={classes.contentSpace}>
         <section className={classes.skip}>
-          <a href=''>Skip →</a>
+          <a href=''>Skip<BiRightArrowAlt className={classes.arrowIcon} /></a>
         </section>
         <div className={classes.heading}>
           <h3>Educational Background</h3>
@@ -115,7 +116,6 @@ const Education = () => {
                 </div>
               </form>
             </div>
-            <br />
             <br />
           </div>
         ))}

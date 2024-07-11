@@ -10,20 +10,28 @@
 }
 
 .imgSpace {
-  width: 30%;
   background-color: #f1f1f1;
   padding-top: 50px;
   padding-left: 50px;
+  margin-left: 20px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #F5F5F5;
+  width: 450px;
+  height: 1000px;
+  top: 14px;
+  left: 13px;
+  gap: 0px;
+  opacity: 0px;
+
 }
 
 .reg {
-  font-size: 28px;
+  font-size: 24px; /* Adjusted from 28px */
   font-weight: 700;
-  line-height: 33.89px;
+  line-height: 30px; /* Adjusted from 33.89px */
 }
 
 .contentSpace {
@@ -47,15 +55,15 @@
 }
 
 .heading h3 {
-  font-size: 36px;
+  font-size: 32px; /* Adjusted from 36px */
   font-weight: 700;
-  line-height: 43.57px;
+  line-height: 40px; /* Adjusted from 43.57px */
 }
 
 .heading p {
-  font-size: 16px;
+  font-size: 14px; /* Adjusted from 16px */
   font-weight: 500;
-  line-height: 19.36px;
+  line-height: 18px; /* Adjusted from 19.36px */
 }
 
 .formContainer {
@@ -99,7 +107,7 @@
   border-radius: 4px;
   background-color: #007bff;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px; /* Adjusted from 16px */
   cursor: pointer;
 }
 
@@ -136,9 +144,9 @@
 .personal1::before {
   content: '';
   position: absolute;
-  left: 25px; /* Adjust based on icon width */
-  top: 50px; /* Adjust based on icon height and margin */
-  height: calc(100% - 50px); /* Adjust height to ensure it doesn't overlap with the icon */
+  left: 20px; /* Adjust based on icon width */
+  top: 40px; /* Adjust based on icon height and margin */
+  height: calc(100% - 40px); /* Adjust height to ensure it doesn't overlap with the icon */
   width: 2px;
   background-color: black;
   z-index: -1; /* Ensure the line is behind the icons */
@@ -149,13 +157,14 @@
 }
 
 .personalText h5 {
+  font-size: 16px; /* Adjusted from default */
   gap: 20px;
 }
 
 .icon {
   border: 2px solid black;
-  height: 50px;
-  width: 50px;
+  height: 40px; /* Adjusted from 50px */
+  width: 40px; /* Adjusted from 50px */
   background-color: #f1f1f1; /* Match the background color to hide the line */
   position: relative;
   z-index: 1; /* Ensure the icon is above the line */
@@ -165,8 +174,11 @@
   font-weight: bold;
 }
 
-
-
 .arrowIcon {
   margin-left: 5px;
+}
+
+span a {
+  text-decoration: none;
+  color: black;
 }
