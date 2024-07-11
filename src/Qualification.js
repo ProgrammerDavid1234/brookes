@@ -1,28 +1,24 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Updated import
-import classes from './Education.module.css';
-import Sidebar from './Sidebar.js';
+import classes from './Qualification.module.css';
+import Sidebar from '../src/Components/Sidebar';
 import { BiRightArrowAlt } from "react-icons/bi";
+import { useNavigate } from 'react-router-dom';
 
-const Education = () => {
+const Qualification = () => {
   const [formData, setFormData] = useState([
     {
-      schoolName: '',
-      degree: '',
-      fieldOfStudy: '',
-      startDate: '',
-      endDate: ''
+      qualificationName: '',
+      institution: '',
+      dateAwarded: '',
     },
     {
-      schoolName: '',
-      degree: '',
-      fieldOfStudy: '',
-      startDate: '',
-      endDate: ''
-    }
+      qualificationName: '',
+      institution: '',
+      dateAwarded: '',
+    },
   ]);
 
-  const navigate = useNavigate(); // Updated hook
+  const navigate = useNavigate();
 
   const handleChange = (e, index) => {
     const { name, value } = e.target;
@@ -31,21 +27,14 @@ const Education = () => {
     setFormData(newFormData);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
   const addNewProgram = () => {
     setFormData([
       ...formData,
       {
-        schoolName: '',
-        degree: '',
-        fieldOfStudy: '',
-        startDate: '',
-        endDate: ''
-      }
+        qualificationName: '',
+        institution: '',
+        dateAwarded: '',
+      },
     ]);
   };
 
@@ -55,7 +44,7 @@ const Education = () => {
   };
 
   const handleNext = () => {
-    navigate('/qualification'); // Updated navigation
+    navigate('/nextpage'); // Change the path as per your routing setup
   };
 
   return (
@@ -67,63 +56,52 @@ const Education = () => {
           <a href=''>Skip<BiRightArrowAlt className={classes.arrowIcon} /></a>
         </section>
         <div className={classes.heading}>
-          <h3>Educational Background</h3>
-          <p>Enter your educational background details</p>
+          <h3>Professional Qualifications</h3>
+          <p>Enter your professional qualifications</p>
         </div>
 
         {formData.map((program, index) => (
           <div key={index}>
-            <h6 style={{ textAlign: 'left' }}>{`Academic Program ${index + 1}`}</h6>
+            <h5 style={{ textAlign: 'left' }}>{`Professional Qualification ${index + 1}`}</h5>
             <div className={classes.formContainer}>
-              <br />
-              <form className={classes.form} onSubmit={handleSubmit}>
+              <form className={classes.form}>
                 <div className={classes.formGroup}>
-                  <label htmlFor={`schoolName-${index}`}>Program name</label>
+                  <label htmlFor={`qualificationName-${index}`}>Qualification</label>
                   <input
                     type="text"
-                    id={`schoolName-${index}`}
-                    name="schoolName"
-                    value={program.schoolName}
+                    id={`qualificationName-${index}`}
+                    name="qualificationName"
+                    placeholder="Qualification Name"
+                    value={program.qualificationName}
                     onChange={(e) => handleChange(e, index)}
                     className={classes.inputs}
                   />
                 </div>
                 <div className={classes.formGroup}>
-                  <label htmlFor={`degree-${index}`}>Institution attended</label>
+                  <label htmlFor={`institution-${index}`} style={{fontSize:'10.2px'}}>Institution qualification was obtained from</label>
                   <input
                     type="text"
-                    id={`degree-${index}`}
-                    name="degree"
-                    value={program.degree}
+                    id={`institution-${index}`}
+                    name="institution"
+                    placeholder="Institution"
+                    value={program.institution}
                     onChange={(e) => handleChange(e, index)}
                     className={classes.inputs}
                   />
                 </div>
                 <div className={classes.formGroup}>
-                  <label htmlFor={`startDate-${index}`}>Start Date</label>
+                  <label htmlFor={`dateAwarded-${index}`}>Date Attained</label>
                   <input
                     type="date"
-                    id={`startDate-${index}`}
-                    name="startDate"
-                    value={program.startDate}
-                    onChange={(e) => handleChange(e, index)}
-                    className={classes.inputs}
-                  />
-                </div>
-                <div className={classes.formGroup}>
-                  <label htmlFor={`endDate-${index}`}>Completion date</label>
-                  <input
-                    type="date"
-                    id={`endDate-${index}`}
-                    name="endDate"
-                    value={program.endDate}
+                    id={`dateAwarded-${index}`}
+                    name="dateAwarded"
+                    value={program.dateAwarded}
                     onChange={(e) => handleChange(e, index)}
                     className={classes.inputs}
                   />
                 </div>
               </form>
             </div>
-            <br />
           </div>
         ))}
 
@@ -148,4 +126,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default Qualification;
