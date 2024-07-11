@@ -29,7 +29,7 @@
 }
 
 .reg {
-  font-size: 24px; /* Adjusted from 28px */
+  font-size: 30px; /* Adjusted from 28px */
   font-weight: 700;
   line-height: 30px; /* Adjusted from 33.89px */
 }
@@ -55,13 +55,13 @@
 }
 
 .heading h3 {
-  font-size: 32px; /* Adjusted from 36px */
+  font-size: 12px; /* Adjusted from 36px */
   font-weight: 700;
   line-height: 40px; /* Adjusted from 43.57px */
 }
 
 .heading p {
-  font-size: 14px; /* Adjusted from 16px */
+  font-size: 9px; /* Adjusted from 16px */
   font-weight: 500;
   line-height: 18px; /* Adjusted from 19.36px */
 }
